@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"> 
+        <title>
+            BookTown
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    </head>
+    <body>
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyC1nR7zqxN4KTM-g599D-mAGELy8td9ApQ",
+            authDomain: "web-app-3d1a4.firebaseapp.com",
+            databaseURL: "https://web-app-3d1a4.firebaseio.com",
+            projectId: "web-app-3d1a4",
+            storageBucket: "web-app-3d1a4.appspot.com",
+            messagingSenderId: "150909362790",
+            appId: "1:150909362790:web:87ffa70754c1203f8183a7",
+            measurementId: "G-3KXYTKH5SZ"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
+        <section id="header">
+            <div class="container">
+                <img src="images/logo.png" class="logo">
+                <div class="header-text">
+                    <h1>Get The Books .<br>You Need From Here</h1>
+                   
+                    <p>We have tons of ebooks .select the one you need from us and continue your learning passion</p>
+                    <button class="common-btn">Read More</button>
+                    <div class="line">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span>
+                        <span class="line-3"></span><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav id="sideNav">
+            <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#courses">COURSES</a></li>
+            <li><a href="#offer">OFFER</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+        </nav>
+        <img src="images/menu.png" id="menuBtn">
+        <script>
+           var menuBtn= document.getElementById("menuBtn");
+           var sideNav= document.getElementById("sideNav");
+
+           sideNav.style.right="-250px";
+
+           menuBtn.onclick = function(){
+               if(sideNav.style.right == "-250px"){
+                   sideNav.style.right="0";
+               }else{
+                   sideNav.style.right = "-250px";
+               }
+           }
+          
+	   var scroll = new SmoothScroll('a[href*="#"]');
+
+        </script>
+        <!--about-->
+        <section id="about">
+            <div class="about-left-col">
+                <img src="images/about.png">
+            </div>
+            <div class="about-right-col">
+                <div class="about-text">
+                    <span class="square"></span>
+                    <h1>About Us</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p><br><br>
+                    <h2>"Learn The Art Of Programming"</h2>
+                    <h3>----Heath Adams----</h3>
+                </div>   
+            </div>
+        </section>
+        <!--features-->
+        <section id="features">
+            <div class="feature-row">
+                <div class="feature-col">
+                    <img src="images/pic-1.png">
+                    <h4>Learn Anywhere</h4>
+                    <p>Switch between your computer,tablet or mobile device</p>
+                </div>
+                <div class="feature-col">
+                    <img src="images/pic-1.png">
+                    <h4>Expert Teachers</h4>
+                    <p>Learn From Industry Expert</p>
+                </div>
+                <div class="feature-col">
+                    <img src="images/pic-3.png">
+                    <h4>Unlimited Access</h4>
+                    <p>Choose what you'd like to learn from our extensive subscription library</p>
+                </div>
+            </div>
+            <div class="feature-btn">
+               
+                <button class="common-btn">Start Free Trial</button>
+            </div>
+        </section>
+        <!--courses-->
+        <section id="courses">
+            <div class="container course-row">
+                <div class="course-left-col">
+                    <div class="course-text">
+                        <h1>Browse Our Top<br>Courses</h1>
+                        <span class="square"></span>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                        </p>
+                        <button class="common-btn">View All Courses</button>
+                    </div>
+                </div>
+                <div class="course-right-col">
+                    <img src="images/course.png">
+                </div>
+            </div>
+        </section>
+        <!--offer-->
+        <section id="offer">
+            <div class="about-left-col">
+                <img src="images/offer.png">
+            </div>
+            <div class="about-right-col">
+                <div class="about-text">
+                    <span class="square"></span>
+                    <h1>Limitless Learning,<br>Limitless Possibilities</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p><br><br>
+                    <button class="common-btn">Start Trial</button>
+                    <h2>"Learn The Art Of Programming"</h2>
+                    <h3>----Heath Adams----</h3>
+                </div>   
+            </div>
+        </section>
+        <!--contact-->
+        <section id="contact">
+            <div class="container contact-row">
+            <div class="contact-left-col">
+                <h1>Sign Up To Join Our<br>Learning Community</h1>
+                <form>
+                    <!--<input type="text" placeholder="Enter Name">-->
+                    <input type="text" placeholder="Email" id="email_field">
+                    <input type="text" placeholder="Password" id="pass_field">
+                    <div class="btn-box">
+                        <button onClick="signUp()">Sign Up</button>
+                       <!-- <button class="common-btn">Sign Up</button>-->
+                        <button class="common-btn">Start Trial</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-right-col">
+            <img src="images/contact.png">
+           </div>
+            </div>
+        </section>
+        <!--footer-->
+        <section id="footer">
+            <div class="container footer-row">
+                <hr>
+                <hr>
+                <div class="footer-left-col">
+               <div class="footer-links">
+                   <div class="link-title">
+                       <h4>Product</h4>
+                       <small>Our Plan</small><br>
+                       <small>Free Trial</small>
+                   </div>
+             
+               <div class="link-title">
+                <h4>About Us</h4>
+                <small>Request Demo</small><br>
+                <small>FAQs</small>
+            </div>
+            <div class="link-title">
+                <h4>Support</h4>
+                <small>Features</small><br>
+                <small>Contact Us</small>
+            </div>
+            <div class="link-title">
+                <h4>Explore</h4>
+                <small>Find a Non Profit</small><br>
+                <small>Corporate Solution</small>
+            </div>
+                </div>
+            </div>
+                <div class="footer-right-col">
+                    <div class="footer-info">
+                        <div class="copyright-text">
+                          <small>support@xypo.com</small><br>
+                            <small>Copyright Xypo 2020</small>
+                        </div>
+                        <div class="footer-logo">
+                            <img src="images/logo.png">
+                            <button class="common-btn">English</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!--social icons-->
+        <div class="social-icons">
+            <img src="images/facebook.png">
+            <img src="images/instagram.png">
+            <img src="images/linkedin.png">
+            <img src="images/twitter.png">
+        </div>
+       
+    </body>
+</html>
